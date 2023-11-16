@@ -4,6 +4,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import SearchBar from './SearchBar';
 import MenuIcon from '@mui/icons-material/Menu';
+import './TopBar.scss';
 
 interface TopBarProps {
   drawerWidth: number;
