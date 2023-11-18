@@ -21,6 +21,7 @@ import Typography from '@mui/material/Typography';
 
 // import SearchBar from '../src/components/SearchBar';
 import AppBar from '../src/components/TopBar';
+import { bookGenres } from '../src/constants/bookGenres';
 
 const drawerWidth = 240;
 
@@ -41,15 +42,16 @@ export default function Index() {
   const drawer = (
     <div>
       <Toolbar />
+      <p>Test</p>
       <Divider />
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
+        {bookGenres.map((genre) => (
+          <ListItem key={genre} disablePadding>
             <ListItemButton>
-              <ListItemIcon>
+              {/* <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+              </ListItemIcon> */}
+              <ListItemText primary={genre} />
             </ListItemButton>
           </ListItem>
         ))}
