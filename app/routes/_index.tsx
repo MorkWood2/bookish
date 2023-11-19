@@ -42,7 +42,19 @@ export default function Index() {
   const drawer = (
     <div>
       <Toolbar />
-      <p>Test</p>
+      <Typography
+        variant='h6'
+        component='h2'
+        position='fixed'
+        sx={{
+          width: drawerWidth,
+          background: '#fff', //change this to variable
+          zIndex: (theme) => theme.zIndex.drawer + 1,
+          paddingLeft: 2,
+        }}
+      >
+        Genres
+      </Typography>
       <Divider />
       <List>
         {bookGenres.map((genre) => (
